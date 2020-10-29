@@ -1,5 +1,6 @@
 import React from 'react'
 import 'react-datepicker/dist/react-datepicker.css'
+import '@babel/runtime-corejs2'
 import { render } from 'react-dom'
 import { App } from './App'
 
