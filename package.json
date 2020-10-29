@@ -34,7 +34,6 @@
   },
   "dependencies": {
     "@apollo/client": "^3.2.5",
-    "@babel/runtime-corejs2": "^7.12.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.11",
@@ -48,5 +47,14 @@
     "react-router-dom": "^5.2.0",
     "react-select": "^3.1.0",
     "subscriptions-transport-ws": "^0.9.18"
+  },
+  "app": "public/index.html",
+  "targets": {
+    "main": false,
+    "app": {
+      "engines": {
+        "browsers": "Chrome 70"
+      }
+    }
   }
 }
