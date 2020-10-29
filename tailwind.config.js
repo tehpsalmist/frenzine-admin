@@ -5,7 +5,12 @@ module.exports = {
     // removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: process.env.NODE_ENV === 'production',
+  purge: {
+    content: [
+      './src/**/*.html',
+      './src/**/*.tsx'
+    ]
+  },
   theme: {
     extend: {
       colors: {
