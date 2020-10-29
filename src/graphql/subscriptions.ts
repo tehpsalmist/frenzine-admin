@@ -129,6 +129,7 @@ export const FULL_PROGRAM = gql`
           }
         }
         triggers {
+          name
           id
           from_step_id
           to_step_id
