@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import gql from 'graphql-tag'
 
 export const CREATE_WORKSPACE = gql`
   mutation CreateWorkspace ($name: String!) {
