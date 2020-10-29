@@ -5,7 +5,7 @@ module.exports = {
     // removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: [],
+  purge: process.env.NODE_ENV === 'production',
   theme: {
     extend: {
       colors: {
