@@ -1,0 +1,210 @@
+@tailwind base;
+
+table th, table td {
+  @apply border border-gray-300 min-w-48 px-2;
+}
+
+@tailwind components;
+
+.btn {
+  @apply
+    inline-flex
+    items-center
+    justify-center
+    px-5
+    py-3
+    border
+    border-transparent
+    text-base
+    leading-6
+    font-medium
+    rounded-md
+    bg-gray-200
+    transition
+    duration-150
+    ease-in-out;
+}
+
+.btn:hover {
+  @apply bg-gray-300;
+}
+
+.btn:focus {
+  @apply outline-none shadow-outline;
+}
+
+.btn:disabled {
+  @apply bg-gray-500 cursor-not-allowed !important;
+}
+
+.btn-secondary {
+  @apply bg-secondary-500 text-white;
+}
+
+.btn-secondary:hover {
+  @apply bg-secondary-600;
+}
+
+.btn-primary {
+  @apply bg-primary-500 text-white;
+}
+
+.btn-primary:hover {
+  @apply bg-primary-600;
+}
+
+.form-radio {
+  color-adjust: exact;
+  background-origin: border-box;
+  user-select: none;
+  @apply
+    inline-block
+    border
+    border-gray-300
+    bg-white
+    text-primary-500
+    w-4
+    h-4
+    rounded-full
+    flex-shrink-0
+    align-middle
+    transition
+    duration-150
+    ease-in-out;
+}
+
+.form-radio:checked {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+  border-color: transparent;
+  background-color: currentColor;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form-radio:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(103, 112, 243, 0.5);
+  @apply border-primary-400;
+}
+
+.form-checkbox {
+  color-adjust: exact;
+  background-origin: border-box;
+  user-select: none;
+  @apply
+    cursor-pointer
+    rounded
+    border
+    bg-white
+    w-4
+    h-4
+    flex-shrink-0
+    align-middle
+    inline-block
+    appearance-none
+    text-primary-500
+    border-gray-300
+    transition
+    duration-150
+    ease-in-out;
+}
+
+.form-checkbox:checked {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4a1 1 0 00-1.414-1.414L7 8.586 5.707 7.293z'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  background-size: 100% 100%;
+  background-position: 50%;
+  @apply bg-no-repeat border-transparent;
+}
+
+.form-checkbox:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(164,202,254,.45);
+  border-color: #a4cafe;
+}
+
+.form-checkbox:checked:focus {
+  @apply border-transparent;
+}
+
+.text-input {
+  @apply w-full py-1 px-2 text-base leading-6 appearance-none border border-gray-300 shadow-none bg-white rounded-md;
+}
+
+.text-input:focus {
+  @apply outline-none shadow-outline border-blue-300;
+}
+
+.text-input:invalid:not([value=""]) {
+  @apply border-red-400;
+}
+
+.form-description {
+  @apply w-full py-1 px-2 text-base leading-6 appearance-none border border-gray-300 shadow-none bg-white rounded-md;
+}
+
+.form-description:focus {
+  @apply outline-none shadow-outline border-blue-300;
+}
+
+.program-grid {
+  @apply grid;
+  grid-template:
+    'sidenav open-close content' 1fr
+  / 3rem     11rem      1fr;
+}
+
+.program-grid .sidenav {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.program-grid.nav-open .sidenav {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.program-grid .content {
+  grid-column-start: 2;
+  grid-column-end: -1;
+}
+
+.program-grid.nav-open .content {
+  grid-column-start: 3;
+  grid-column-end: -1;
+}
+
+.controls-grid {
+  @apply grid place-items-stretch text-primary-600;
+  grid-template:
+    'c-content .'      auto
+    'c-content close'  3rem
+    'c-content object' 3rem
+    'c-content legend' 3rem
+  / auto       3rem;
+}
+
+.controls-content {
+  grid-area: c-content;
+}
+
+.controls-object {
+  grid-area: object;
+}
+
+.controls-legend {
+  grid-area: legend;
+}
+
+.controls-close {
+  grid-area: close;
+}
+
+@tailwind utilities;
+
+@responsive {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+}
