@@ -88,9 +88,7 @@ export const FULL_PROGRAM = gql`
         submission_step_definitions {
           id
           name
-          eligibility_criteria
           starting_step
-          is_listing
           visual_x
           visual_y
           type_id
